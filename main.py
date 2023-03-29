@@ -32,7 +32,7 @@ response = requests.get(url, headers=header)
 
 remain = float(re.findall((r"(\d+(\.\d+)?)度"),response.text)[0][0])
 try:
-    request.get(r"http://www.pushplus.plus/send?token="+ token + "&title=电费剩余" + str(remain))
+    requests.get(r"http://www.pushplus.plus/send?token="+ token + "&title=电费剩余" + str(remain))
 except:
     pass
 originstring = '[]'
