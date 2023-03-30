@@ -14,7 +14,7 @@ import json,datetime,os,requests,re
 #     remain = float(page.locator('text=/\d+\.\d+度/i').inner_text().rstrip("度"))
 
 url = os.environ.get('URL').strip()
-token = os.environ.get('TOKEN').strip()
+token = os.environ.get('TOKEN')
 header = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
     'Accept-Encoding': 'gzip, deflate, br',
